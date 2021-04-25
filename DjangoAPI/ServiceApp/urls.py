@@ -14,5 +14,6 @@ urlpatterns = [
     url(r'^vendor/$', views.vendorApi),
     url(r'^vendor/([0-9]+)$', views.vendorApi),
 
-    url(r'^SaveFile$', views.SaveFile)
+    url(r'^SaveFile$', views.SaveFile),
+    url('', views.home, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
