@@ -9,6 +9,9 @@ from ServiceApp.serializers import ServiceSerializer, ListingSerializer, VendorS
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'home.html', {})
+
 @csrf_exempt
 def serviceApi(request, id=0):
     if request.method == 'GET':
